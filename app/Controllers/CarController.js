@@ -1,21 +1,21 @@
 import { ProxyState } from "../AppState.js"
 import { carsService } from "../Services/CarService.js"
 
-function _draw() {
-  let cars = ProxyState.cars
-  let template = ""
-  cars.forEach(c => template += c.Template)
-  document.getElementById("cars").innerHTML = template
-}
 
 export default class CarsController {
   constructor() {
     console.log("cars controller")
     console.log(ProxyState.cars)
-    _draw()
-    ProxyState.on("cars", _draw)
+    this.drawCars()
+    ProxyState.on("cars", this.drawCars)
   }
 
+  drawCars() {
+    let cars = ProxyState.cars
+    let template = ""
+    cars.forEach(c => template += c.Template)
+    document.getElementById("content").innerHTML = template
+  }
   createCar() {
     event.preventDefault();
     console.log("car creating")

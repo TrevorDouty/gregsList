@@ -1,21 +1,21 @@
 import { ProxyState } from "../AppState.js"
 import { housesService } from "../Services/HousesService.js"
 
-function _draw() {
-  let houses = ProxyState.houses
-  let template = ""
-  houses.forEach(h => template += h.Template)
-  document.getElementById("houses").innerHTML = template
-}
+
 
 export default class HousesController {
   constructor() {
     console.log("houses controller")
     console.log(ProxyState.houses)
-    _draw()
-    ProxyState.on("houses", _draw)
+    // _drawHouses()
+    ProxyState.on("houses", this.drawHouses)
   }
-
+  drawHouses() {
+    let houses = ProxyState.houses
+    let template = ""
+    houses.forEach(h => template += h.Template)
+    document.getElementById("content").innerHTML = template
+  }
   createHouses() {
     event.preventDefault();
     console.log("house creating")
