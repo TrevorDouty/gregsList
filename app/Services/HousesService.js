@@ -8,8 +8,8 @@ class HousesService {
   bid(id, bidAmount) {
     let temp = ProxyState.houses
     if (bidAmount > 0) {
-      let car = temp.find(c => c.id == id)
-      car.price += parseInt(bidAmount)
+      let houses = temp.find(h => h.id == id)
+      houses.price += parseInt(bidAmount)
       ProxyState.houses = temp
     }
   }

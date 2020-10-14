@@ -1,5 +1,6 @@
 import Car from "./Models/Car.js"
 import Houses from "./Models/Houses.js"
+import Jobs from "./Models/Jobs.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -10,6 +11,11 @@ class AppState extends EventEmitter {
   /** @type {Houses[]} */
 
   houses = [new Houses({ builder: "Rori Bartooon", model: "two-story", year: 1979, price: 299000, img: "//placehold.it/200x200", description: "This a kinda old house" })]
+
+  /** @type {Jobs[]} */
+
+  jobs = [new Jobs({ employer: "BCW", jobTitle: "grunt", pay: 2, yearsExperience: 0, img: "//placehold.it/200x200", description: "type a lot" })]
+
 }
 // new Car("Jeep", "Rango",1990, 10000, "//placehold.it/200x200", "A nice jeep")
 

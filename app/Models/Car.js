@@ -12,7 +12,7 @@ export default class Car {
 
   get Template() {
     return `<div class="col-4">
-    <div class="card">
+    <div class="card bg-dark text-light">
     <img class="card-img-top img-fluid" src="${this.img}" alt="">
     <div class="card-body">
         <h4 class="card-title">${this.make} ${this.model}</h4>
@@ -22,7 +22,7 @@ export default class Car {
         <input type="number"
         class="form-control" name="bid" id="bid" aria-describedby="helpId" placeholder="Bid">
         </div>
-        <button class="btn btn-success" type="submit" >Bid</button>
+        <button class="btn btn-success btn-block" type="submit" >Bid</button>
         </form>
         <button class="btn btn-danger" onclick="app.carsController.delete('${this.id}')">Delete</button>
     </div>
