@@ -53,6 +53,41 @@
             </div>
         </div>
         <div class="row" id="cars">
+        </div>
+
+        <div class="row">
+            <div class="col" id="form">
+                <form onsubmit="app.housesController.createHouses()" class="form-inline">
+                    <div class="form-group p-1">
+                        <input type="text" class="form-control" name="builder" id="builder" aria-describedby="helpId"
+                            placeholder="Builder">
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="text" class="form-control" name="model" id="model" aria-describedby="helpId"
+                            placeholder="Model">
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="number" class="form-control" name="price" id="price" aria-describedby="helpId"
+                            placeholder="Price">
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="number" class="form-control" name="year" id="year" aria-describedby="helpId"
+                            placeholder="Year">
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="url" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="helpId"
+                            placeholder="Img">
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="text" class="form-control" name="description" id="description"
+                            aria-describedby="helpId" placeholder="Description">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="houses">
+
 
         </div>
     </main>
