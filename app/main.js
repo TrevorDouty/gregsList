@@ -1,4 +1,4 @@
-import CarsController from "./Controllers/CarsController.js";
+import CarsController from "./Controllers/CarController.js";
 
 class App {
   carsController = new CarsController()

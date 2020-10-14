@@ -1,4 +1,4 @@
-import { generateId } from "../Utils/GenerateId.js"
+import { generateId } from "../Utils/GeneratedId.js"
 export default class Car {
   constructor({ make, model, year, price, img, description }) {
     this.make = make
